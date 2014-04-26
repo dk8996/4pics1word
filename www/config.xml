@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.4pics1wrd"
+        id        = "com.phonegap.fourpics1wrd"
         version   = "2.0.0">
 
     <name>4pics1wrd</name>
