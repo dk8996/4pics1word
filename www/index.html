@@ -18,28 +18,67 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="lib/angular.mini.js"></script>
-        <script type="text/javascript" src="lib/ratchet.mini.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport"
+  content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" type="text/css" href="css/ratchet.min.css" />
+<link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.min.css" />
+<link rel="stylesheet" type="text/css" href="css/pure-min.css" />
+<title>4pics1wrd</title>
+</head>
+<body>
+  <header class="bar bar-nav">
+    <button class="btn pull-left">Left</button>
+    <button class="btn pull-right">Right</button>
+    <h1 class="title">Title</h1>
+  </header>
+  <div class="content">
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <img class="media-object pure-img" src="http://placehold.it/200x200">
+      </div>
+      <div class="pure-u-1-2">
+        <img class="media-object pure-img" src="http://placehold.it/200x200">
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <img class="media-object pure-img" src="http://placehold.it/200x200">
+      </div>
+      <div class="pure-u-1-2">
+        <img class="media-object pure-img" src="http://placehold.it/200x200">
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-8 btn">A</div>
+      <div class="pure-u-1-8 btn">B</div>
+      <div class="pure-u-1-8 btn">C</div>
+      <div class="pure-u-1-8 btn">D</div>
+      <div class="pure-u-1-8 btn">E</div>
+      <div class="pure-u-1-8 btn">F</div>
+      <div class="pure-u-1-8 btn">G</div>
+      <div class="pure-u-1-8 btn">H</div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-8 btn">A</div>
+      <div class="pure-u-1-8 btn">B</div>
+      <div class="pure-u-1-8 btn">C</div>
+      <div class="pure-u-1-8 btn">D</div>
+      <div class="pure-u-1-8 btn">E</div>
+      <div class="pure-u-1-8 btn">F</div>
+      <div class="pure-u-1-8 btn">G</div>
+      <div class="pure-u-1-8 btn">H</div>
+    </div>
+  </div>
+  <script type="text/javascript" src="phonegap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="lib/ratchet.min.js"></script>
+  <script type="text/javascript">
+			app.initialize();
+		</script>
+</body>
 </html>
