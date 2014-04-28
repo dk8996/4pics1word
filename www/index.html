@@ -17,7 +17,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
+<html ng-app="MainApp">
 <head>
 <meta charset="utf-8" />
 <meta name="format-detection" content="telephone=no" />
@@ -35,10 +35,10 @@
     <button class="btn pull-right">Right</button>
     <h1 class="title">Title</h1>
   </header>
-  <div class="content">
+  <div class="content" ng-controller="ContentCtrl">
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <img class="media-object pure-img" src="http://placehold.it/200x200">
+        <img class="media-object pure-img" src="img/test-pic.jpg">
       </div>
       <div class="pure-u-1-2">
         <img class="media-object pure-img" src="http://placehold.it/200x200">
@@ -52,15 +52,11 @@
         <img class="media-object pure-img" src="http://placehold.it/200x200">
       </div>
     </div>
+     <div class="pure-g">
+      <div class="pure-u-1-5" ng-repeat="answerBoxe in answerBoxes"><img class="media-object pure-img" ng-src="img/used-{{answerBoxe.letter}}.png" ng-click="answerClick(answerBoxe)"></div>
+     </div>
     <div class="pure-g">
-      <div class="pure-u-1-8 btn">A</div>
-      <div class="pure-u-1-8 btn">B</div>
-      <div class="pure-u-1-8 btn">C</div>
-      <div class="pure-u-1-8 btn">D</div>
-      <div class="pure-u-1-8 btn">E</div>
-      <div class="pure-u-1-8 btn">F</div>
-      <div class="pure-u-1-8 btn">G</div>
-      <div class="pure-u-1-8 btn">H</div>
+      <div class="pure-u-1-8" ng-repeat="letterBox in letterBoxes"><img class="media-object pure-img" ng-src="img/{{letterBox.letter}}.png"  ng-click="letterClick(letterBox)" ng-show="!letterBox.selected"></div>
     </div>
     <div class="pure-g">
       <div class="pure-u-1-8 btn">A</div>
@@ -77,6 +73,7 @@
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="lib/angular.min.js"></script>
   <script type="text/javascript" src="lib/ratchet.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript"></script>
 </body>
 </html>
