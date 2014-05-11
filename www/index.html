@@ -31,42 +31,30 @@
 </head>
 <body>
   <header class="bar bar-nav">
-    <button class="btn pull-left">Left</button>
-    <button class="btn pull-right">Right</button>
-    <h1 class="title">Title</h1>
+    <h1 class="title">4Pics 1Wrd</h1>
   </header>
   <div class="content" ng-controller="ContentCtrl">
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <img class="media-object pure-img" src="img/test-pic.jpg">
+        <img class="media-object pure-img" ng-src="img/test-pic.jpg">
       </div>
       <div class="pure-u-1-2">
-        <img class="media-object pure-img" src="http://placehold.it/200x200">
+        <img class="media-object pure-img" ng-src="img/test-pic.jpg">
       </div>
     </div>
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <img class="media-object pure-img" src="http://placehold.it/200x200">
+        <img class="media-object pure-img" ng-src="img/test-pic.jpg">
       </div>
       <div class="pure-u-1-2">
-        <img class="media-object pure-img" src="http://placehold.it/200x200">
+        <img class="media-object pure-img" ng-src="img/test-pic.jpg">
       </div>
     </div>
      <div class="pure-g">
-      <div class="pure-u-1-5" ng-repeat="answerBoxe in answerBoxes"><img class="media-object pure-img" ng-src="img/used-{{answerBoxe.letter}}.png" ng-click="answerClick(answerBoxe)"></div>
+      <div class="pure-u-{{Math.min(4,Math.floor(24/answerBoxes.length))}}-24" ng-repeat="answerBoxe in answerBoxes"><img class="media-object pure-img" ng-src="img/used-{{answerBoxe.letter}}.png" ng-click="answerClick(answerBoxe)"></div>
      </div>
     <div class="pure-g">
       <div class="pure-u-1-8" ng-repeat="letterBox in letterBoxes"><img class="media-object pure-img" ng-src="img/{{letterBox.letter}}.png"  ng-click="letterClick(letterBox)" ng-show="!letterBox.selected"></div>
-    </div>
-    <div class="pure-g">
-      <div class="pure-u-1-8 btn">A</div>
-      <div class="pure-u-1-8 btn">B</div>
-      <div class="pure-u-1-8 btn">C</div>
-      <div class="pure-u-1-8 btn">D</div>
-      <div class="pure-u-1-8 btn">E</div>
-      <div class="pure-u-1-8 btn">F</div>
-      <div class="pure-u-1-8 btn">G</div>
-      <div class="pure-u-1-8 btn">H</div>
     </div>
   </div>
   <script type="text/javascript" src="phonegap.js"></script>
